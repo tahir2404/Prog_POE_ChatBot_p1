@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ProgPOEChatBot.csproj": {}
+    "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CyberSecurityChatBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ProgPOEChatBot.csproj": {
+    "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CyberSecurityChatBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ProgPOEChatBot.csproj",
-        "projectName": "ProgPOEChatBot",
-        "projectPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ProgPOEChatBot.csproj",
+        "projectUniqueName": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CyberSecurityChatBot.csproj",
+        "projectName": "CyberSecurityChatBot",
+        "projectPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CyberSecurityChatBot.csproj",
         "packagesPath": "C:\\Users\\tahir\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\obj\\",
         "projectStyle": "PackageReference",

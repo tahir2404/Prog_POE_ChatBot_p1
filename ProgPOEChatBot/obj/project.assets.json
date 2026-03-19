@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tahir\\source\\repos\\ProgPOEChatBot\\ProgPOEChatBot\\ProgPOEChatBot.csproj",
-      "projectName": "ProgPOEChatBot",
-      "projectPath": "C:\\Users\\tahir\\source\\repos\\ProgPOEChatBot\\ProgPOEChatBot\\ProgPOEChatBot.csproj",
+      "projectUniqueName": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CybersecurityBot.csproj",
+      "projectName": "CybersecurityBot",
+      "projectPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CybersecurityBot.csproj",
       "packagesPath": "C:\\Users\\tahir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tahir\\source\\repos\\ProgPOEChatBot\\ProgPOEChatBot\\obj\\",
+      "outputPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,7 +51,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
