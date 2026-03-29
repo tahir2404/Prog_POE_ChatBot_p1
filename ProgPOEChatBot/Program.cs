@@ -1,22 +1,23 @@
-﻿using System;
+﻿// Entry point for the Cybersecurity Awareness Chatbot.
+// it simply coordinates the startup sequence and hands off to the
+// relevant classes. 
 
 namespace CybersecurityBot
 {
-    
     class Program
     {
         static void Main(string[] args)
         {
-            // Play the voice greeting when the app launches
+            // Step 1: Play the recorded WAV voice greeting
             AudioHelper.PlayGreeting();
 
-            // Display the ASCII art logo/header
+            // Step 2: Display the ASCII art logo/title screen
             DisplayHelper.ShowLogo();
 
-            // Get the user's name and personalise the session
+            // Step 3: Ask for the user's name and show a welcome message
             string userName = DisplayHelper.GreetUser();
 
-            // Start the main chat loop
+            // Step 4: Create the chatbot and start the conversation loop
             ChatBot bot = new ChatBot(userName);
             bot.StartChat();
         }
