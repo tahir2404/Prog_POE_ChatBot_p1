@@ -14,7 +14,6 @@ namespace CybersecurityBot
     /// Currently plays a WAV voice greeting on startup.
     public static class AudioHelper
     {
-        // Place this file in the same folder as the .exe (project root).
         private const string GreetingFileName = "greeting.wav";
 
         /// Plays the WAV voice greeting file when called.

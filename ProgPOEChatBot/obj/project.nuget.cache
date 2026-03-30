@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dj36RHPAQlo=",
+  "dgSpecHash": "fJR7eJhs88A=",
   "success": true,
   "projectFilePath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\CybersecurityBot.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tahir\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
-    "C:\\Users\\tahir\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\tahir\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\tahir\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\tahir\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.25\\microsoft.netcore.app.host.win-x64.8.0.25.nupkg.sha512"
+    "C:\\Users\\tahir\\.nuget\\packages\\system.windows.extensions\\10.0.0\\system.windows.extensions.10.0.0.nupkg.sha512"
   ],
   "logs": []
 }

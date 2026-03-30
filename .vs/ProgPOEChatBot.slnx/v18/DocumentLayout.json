@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\responseengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\responseengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\displayhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\responseengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\responseengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\progpoechatbot\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87AE4C49-43A9-B300-6BAE-50B288663F19}|ProgPOEChatBot\\CybersecurityBot.csproj|solutionrelative:progpoechatbot\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,40 +30,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Displayhelper.cs",
-              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Displayhelper.cs",
-              "RelativeDocumentMoniker": "ProgPOEChatBot\\Displayhelper.cs",
-              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Displayhelper.cs",
-              "RelativeToolTip": "ProgPOEChatBot\\Displayhelper.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwHwAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T16:51:37.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Responseengine.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Responseengine.cs",
               "RelativeDocumentMoniker": "ProgPOEChatBot\\Responseengine.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Responseengine.cs",
               "RelativeToolTip": "ProgPOEChatBot\\Responseengine.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T16:47:18.215Z",
+              "WhenOpened": "2026-03-30T13:53:24.406Z",
               "EditorCaption": ""
             },
             {
@@ -74,33 +57,49 @@
               "RelativeDocumentMoniker": "ProgPOEChatBot\\Program.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Program.cs",
               "RelativeToolTip": "ProgPOEChatBot\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T13:53:23.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Displayhelper.cs",
+              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Displayhelper.cs",
+              "RelativeDocumentMoniker": "ProgPOEChatBot\\Displayhelper.cs",
+              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\Displayhelper.cs",
+              "RelativeToolTip": "ProgPOEChatBot\\Displayhelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T16:47:16.291Z"
+              "WhenOpened": "2026-03-30T13:53:21.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AudioHelper.cs",
-              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\AudioHelper.cs",
-              "RelativeDocumentMoniker": "ProgPOEChatBot\\AudioHelper.cs",
-              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\AudioHelper.cs",
-              "RelativeToolTip": "ProgPOEChatBot\\AudioHelper.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T16:42:42.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ChatBot.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ChatBot.cs",
               "RelativeDocumentMoniker": "ProgPOEChatBot\\ChatBot.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\ChatBot.cs",
               "RelativeToolTip": "ProgPOEChatBot\\ChatBot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowC8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T15:47:45.503Z"
+              "WhenOpened": "2026-03-30T13:53:20.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AudioHelper.cs",
+              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\AudioHelper.cs",
+              "RelativeDocumentMoniker": "ProgPOEChatBot\\AudioHelper.cs",
+              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\ProgPOEChatBot\\AudioHelper.cs",
+              "RelativeToolTip": "ProgPOEChatBot\\AudioHelper.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T16:42:42.532Z",
+              "EditorCaption": ""
             }
           ]
         }

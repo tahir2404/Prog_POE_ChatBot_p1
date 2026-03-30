@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFramework>net10.0-windows</TargetFramework>
 		<RootNamespace>PROGPoe</RootNamespace>
 		<AssemblyName>PROGPoe</AssemblyName>
 		<Nullable>enable</Nullable>
@@ -10,7 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
+		<PackageReference Include="System.Windows.Extensions" Version="10.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

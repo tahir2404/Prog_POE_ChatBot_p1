@@ -56,7 +56,7 @@ namespace CybersecurityBot
             {
                 // Display the input prompt with the user's name
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write($"  👤 {UserName}: ");
+                Console.Write($"   {UserName}: ");
                 Console.ResetColor();
 
                 // Read user input from the console
@@ -98,7 +98,7 @@ namespace CybersecurityBot
         
         private void ProcessInput(string input)
         {
-            // Normalise to lowercase for command matching
+            // Normalise to lowercase 
             string lower = input.ToLower();
 
 

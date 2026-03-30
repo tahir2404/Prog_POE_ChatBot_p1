@@ -1,6 +1,5 @@
 ﻿// Entry point for the Cybersecurity Awareness Chatbot.
-// it simply coordinates the startup sequence and hands off to the
-// relevant classes. 
+// it simply coordinates the startup sequence 
 
 namespace CybersecurityBot
 {
