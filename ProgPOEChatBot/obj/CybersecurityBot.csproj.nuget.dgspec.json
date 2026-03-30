@@ -52,7 +52,7 @@
           "dependencies": {
             "Microsoft.Windows.Compatibility": {
               "target": "Package",
-              "version": "[10.0.5, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [

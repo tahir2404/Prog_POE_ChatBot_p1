@@ -10,9 +10,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.0" />
 	</ItemGroup>
-  
+
 	<ItemGroup>
 		<None Update="greeting.wav">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
