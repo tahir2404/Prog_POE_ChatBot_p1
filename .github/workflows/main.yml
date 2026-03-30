@@ -1,29 +1,25 @@
-name: .NET Build CI
+name: .NET Build
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Setup .NET 10
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 10.0.x
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
 
-      - name: Build project
-        run: dotnet build --no-restore --configuration Release
-
-      - name: Confirm build success
-        run: echo "Build completed successfully!"
+    - name: Build
+      run: dotnet build --no-restore
