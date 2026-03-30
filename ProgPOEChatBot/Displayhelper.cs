@@ -32,14 +32,14 @@ namespace CybersecurityBot
             Console.WriteLine(@"
   ╔══════════════════════════════════════════════════════════╗
   ║                                                          ║
-  ║     /$$$$$$  /$$     /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$   ║
-  ║    /$$__  $$|  $$   /$$/| $$__  $$| $$_____/| $$__  $$  ║
-  ║   | $$  \__/ \  $$ /$$/ | $$  \ $$| $$      | $$  \ $$  ║
-  ║   | $$        \  $$$$/  | $$$$$$$ | $$$$$   | $$$$$$$/  ║
-  ║   | $$         \  $$/   | $$__  $$| $$__/   | $$__  $$  ║
-  ║   | $$    $$    | $$    | $$  \ $$| $$      | $$  \ $$  ║
-  ║   |  $$$$$$/    | $$    | $$$$$$$/| $$$$$$$$| $$  | $$  ║
-  ║    \______/     |__/    |_______/ |________/|__/  |__/  ║
+  ║     /$$$$$$  /$$     /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$    ║
+  ║    /$$__  $$|  $$   /$$/| $$__  $$| $$_____/| $$__  $$   ║
+  ║   | $$  \__/ \  $$ /$$/ | $$  \ $$| $$      | $$  \ $$   ║
+  ║   | $$        \  $$$$/  | $$$$$$$ | $$$$$   | $$$$$$$/   ║
+  ║   | $$         \  $$/   | $$__  $$| $$__/   | $$__  $$   ║
+  ║   | $$    $$    | $$    | $$  \ $$| $$      | $$  \ $$   ║
+  ║   |  $$$$$$/    | $$    | $$$$$$$/| $$$$$$$$| $$  | $$   ║
+  ║    \______/     |__/    |_______/ |________/|__/  |__/   ║
   ║                                                          ║
   ║           CYBERSECURITY AWARENESS ASSISTANT              ║
   ║             Protecting South African Citizens            ║
@@ -64,7 +64,7 @@ namespace CybersecurityBot
             while (string.IsNullOrWhiteSpace(userName))
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("\n  👤 Please enter your name: ");
+                Console.Write("\n   Please enter your name: ");
                 Console.ResetColor();
 
                 userName = Console.ReadLine()?.Trim() ?? string.Empty;
@@ -72,14 +72,14 @@ namespace CybersecurityBot
                 if (string.IsNullOrWhiteSpace(userName))
                 {
                     // Inform the user and loop again
-                    PrintColoured("  ⚠  Name cannot be empty. Please try again.", ConsoleColor.Red);
+                    PrintColoured("    Name cannot be empty. Please try again.", ConsoleColor.Red);
                 }
             }
 
             // Show a personalised welcome with a typing animation
             Console.WriteLine();
             PrintDivider('─');
-            TypeText($"\n  👋 Welcome, {userName}!", ConsoleColor.Green);
+            TypeText($"\n   Welcome, {userName}!", ConsoleColor.Green);
             TypeText("  I'm your Cybersecurity Awareness Assistant.", ConsoleColor.Green);
             TypeText("  I'm here to help you stay safe online in South Africa and beyond.\n", ConsoleColor.Green);
             PrintDivider('─');
@@ -97,19 +97,19 @@ namespace CybersecurityBot
         public static void ShowTopicsMenu()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\n  📋 Topics you can ask me about:");
+            Console.WriteLine("\n   Topics you can ask me about:");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("  ┌─────────────────────────────────────────────────┐");
-            Console.WriteLine("  │  • password    – Password safety tips            │");
-            Console.WriteLine("  │  • phishing    – How to spot phishing scams      │");
-            Console.WriteLine("  │  • browsing    – Safe browsing habits            │");
-            Console.WriteLine("  │  • malware     – Malware awareness               │");
-            Console.WriteLine("  │  • social      – Social engineering threats      │");
-            Console.WriteLine("  │  • privacy     – Protecting your personal info   │");
-            Console.WriteLine("  │  • how are you – Chat with me                    │");
-            Console.WriteLine("  │  • purpose     – What I do                       │");
-            Console.WriteLine("  │  • help        – Show this menu again            │");
-            Console.WriteLine("  │  • quit        – Exit the chatbot                │");
+            Console.WriteLine("  │  • password    – Password safety tips           │");
+            Console.WriteLine("  │  • phishing    – How to spot phishing scams     │");
+            Console.WriteLine("  │  • browsing    – Safe browsing habits           │");
+            Console.WriteLine("  │  • malware     – Malware awareness              │");
+            Console.WriteLine("  │  • social      – Social engineering threats     │");
+            Console.WriteLine("  │  • privacy     – Protecting your personal info  │");
+            Console.WriteLine("  │  • how are you – Chat with me                   │");
+            Console.WriteLine("  │  • purpose     – What I do                      │");
+            Console.WriteLine("  │  • help        – Show this menu again           │");
+            Console.WriteLine("  │  • quit        – Exit the chatbot               │");
             Console.WriteLine("  └─────────────────────────────────────────────────┘");
             Console.ResetColor();
             PrintDivider('─');
@@ -159,7 +159,7 @@ namespace CybersecurityBot
         {
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.Write("  🤖 Bot: ");
+            Console.Write("   Bot: ");
             TypeText(response, ConsoleColor.White, 10);
             Console.WriteLine();
         }

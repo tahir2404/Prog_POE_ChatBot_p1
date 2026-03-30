@@ -42,7 +42,7 @@ namespace CybersecurityBot
 
                 ["how are you"] =
                     $"I'm running perfectly and fully focused on keeping you cyber-safe, {UserName}! " +
-                    "Cybersecurity never sleeps — and neither do I. 😄",
+                    "Cybersecurity never sleeps — and neither do I. ",
 
                 ["purpose"] =
                     $"Great question, {UserName}! My purpose is to educate South African citizens about " +

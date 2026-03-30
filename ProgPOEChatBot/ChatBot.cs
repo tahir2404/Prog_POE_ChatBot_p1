@@ -85,7 +85,7 @@ namespace CybersecurityBot
             if (string.IsNullOrWhiteSpace(input))
             {
                 DisplayHelper.PrintColoured(
-                    "\n  ⚠  I didn't catch anything. Please type a question or 'help' for options.",
+                    "\n    I didn't catch anything. Please type a question or 'help' for options.",
                     ConsoleColor.Red);
                 return false;
             }
@@ -130,7 +130,7 @@ namespace CybersecurityBot
                 // No keyword matched
                 // This handles invalid/unsupported queries 
                 DisplayHelper.ShowBotResponse(
-                    $"I didn't quite understand that, {UserName}. 🤔\n" +
+                    $"I didn't quite understand that, {UserName}. \n" +
                     "  Could you try rephrasing? Type 'help' to see the topics I can assist with.");
             }
 
@@ -146,7 +146,7 @@ namespace CybersecurityBot
             Console.WriteLine();
             DisplayHelper.PrintDivider('═');
             DisplayHelper.TypeText(
-                $"\n  👋 Stay safe online, {UserName}! Goodbye and take care. 🔒\n",
+                $"\n   Stay safe online, {UserName}! Goodbye and take care. \n",
                 ConsoleColor.Green);
             DisplayHelper.PrintDivider('═');
             Console.WriteLine();
