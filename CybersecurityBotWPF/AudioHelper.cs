@@ -1,54 +1,39 @@
-﻿
-// Responsible for playing the recorded WAV voice greeting
-// when the application first launches.
-
-
-using System;
+﻿using System;
 using System.IO;
 using System.Media;
 
-namespace CybersecurityBot
+namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Static helper class that handles all audio playback for the chatbot.
-    /// Currently plays a WAV voice greeting on startup.
+    /// Static helper class that handles audio playback for the chatbot.
+    /// Plays the WAV voice greeting when the WPF application starts.
+    /// </summary>
     public static class AudioHelper
     {
-        private const string GreetingFileName = "greeting.wav";
+        // Location of the WAV file inside the project output folder
+        private const string GreetingFilePath = "Assets/greeting.wav";
 
-        /// Plays the WAV voice greeting file when called.
-        
-        public static void PlayGreeting()
+        /// <summary>
+        /// Plays the greeting audio file when the application opens.
+        /// Returns a message so the GUI can handle success or error feedback if needed.
+        /// </summary>
+        /// <returns>Status message showing whether the audio played successfully.</returns>
+        public static string PlayGreeting()
         {
             try
             {
-                // Check that the WAV file actually exists before trying to play it
-                if (File.Exists(GreetingFileName))
+                if (File.Exists(GreetingFilePath))
                 {
-                    using (SoundPlayer player = new SoundPlayer(GreetingFileName))
-                    {
-                        // PlaySync plays the audio and waits until it finishes
-                        // before moving on — keeps the startup sequence in order
-                        player.PlaySync();
-                    }
+                    using SoundPlayer player = new SoundPlayer(GreetingFilePath);
+                    player.Play();
+                    return "Voice greeting played successfully.";
                 }
-                else
-                {
-                    // File not found — warn the user but do not crash
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\n  [Audio] 'greeting.wav' not found.");
-                    Console.WriteLine("  Place your WAV file in the application folder and rebuild.");
-                    Console.ResetColor();
-                    Console.WriteLine();
-                }
+
+                return "Audio file not found. Please make sure greeting.wav is inside the Assets folder.";
             }
             catch (Exception ex)
             {
-                // Something unexpected went wrong with audio playback
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"\n  [Audio Error] Could not play greeting: {ex.Message}");
-                Console.ResetColor();
-                Console.WriteLine();
+                return $"Audio error: {ex.Message}";
             }
         }
     }
