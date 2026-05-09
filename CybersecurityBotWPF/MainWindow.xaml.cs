@@ -1,4 +1,4 @@
-﻿using CybersecurityBot;
+﻿using CybersecurityBotWPF;
 using System.Windows;
 using System.Windows.Input;
 

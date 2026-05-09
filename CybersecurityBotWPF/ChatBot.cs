@@ -16,6 +16,8 @@ namespace CybersecurityBotWPF
 
         private readonly UserMemory _memory;
 
+        private readonly SentimentDetector _sentimentDetector;
+
         /// <summary>
         /// Creates a new chatbot instance and prepares the response engine.
         /// </summary>
@@ -25,6 +27,7 @@ namespace CybersecurityBotWPF
             _userName = userName;
             _responseEngine = new ResponseEngine(userName);
             _memory = new UserMemory();
+            _sentimentDetector = new SentimentDetector();
         }
 
         /// <summary>
@@ -35,24 +38,28 @@ namespace CybersecurityBotWPF
         /// <returns>A chatbot response as text.</returns>
         public string GetBotResponse(string input)
         {
+            // Prevent empty input
             if (string.IsNullOrWhiteSpace(input))
             {
                 return "Please type a question or message.";
             }
 
+            // Convert input to lowercase for easier keyword matching
             string lowerInput = input.ToLower();
 
+            // Show help menu
             if (lowerInput == "help" || lowerInput.Contains("what can i ask"))
             {
                 return GetHelpMessage();
             }
 
+            // Exit chatbot message
             if (lowerInput == "quit" || lowerInput == "exit" || lowerInput == "bye")
             {
                 return $"Goodbye, {_userName}. Stay safe online!";
             }
 
-            // Detect favourite cybersecurity interests
+            // Remember favourite topics
             if (lowerInput.Contains("interested in"))
             {
                 if (lowerInput.Contains("privacy"))
@@ -74,10 +81,36 @@ namespace CybersecurityBotWPF
                 }
             }
 
+            // Detect sentiment
+            string sentiment = _sentimentDetector.DetectSentiment(input);
+
+            // Worried response
+            if (sentiment == "worried")
+            {
+                return "It's completely understandable to feel worried about cybersecurity threats.\n\n" +
+                       "A good first step is to avoid clicking suspicious links and never share passwords with anyone.";
+            }
+
+            // Frustrated response
+            if (sentiment == "frustrated")
+            {
+                return "Cybersecurity can definitely feel overwhelming sometimes, but you're doing the right thing by learning about it.\n\n" +
+                       "Focus on simple habits like strong passwords and safe browsing.";
+            }
+
+            // Curious response
+            if (sentiment == "curious")
+            {
+                return "I love your curiosity about cybersecurity! Learning about online safety is one of the best ways to protect yourself.";
+            }
+
+            // Get normal cybersecurity response
             string? response = _responseEngine.GetResponse(input);
 
+            // If a keyword response exists
             if (response != null)
             {
+                // Add personalised memory message
                 if (!string.IsNullOrWhiteSpace(_memory.FavouriteTopic))
                 {
                     response += $"\n\nSince you're interested in {_memory.FavouriteTopic}, this topic is especially important for you.";
@@ -85,6 +118,9 @@ namespace CybersecurityBotWPF
 
                 return response;
             }
+
+            // Default fallback response
+            return $"I'm not sure I understand, {_userName}. Can you try rephrasing? Type 'help' to see what you can ask me.";
         }
 
         /// <summary>
