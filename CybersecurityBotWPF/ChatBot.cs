@@ -1,4 +1,4 @@
-﻿using CybersecurityBot;
+﻿using CybersecurityBotWPF;
 
 namespace CybersecurityBotWPF
 {
@@ -14,6 +14,8 @@ namespace CybersecurityBotWPF
         // Handles keyword-based cybersecurity responses
         private readonly ResponseEngine _responseEngine;
 
+        private readonly UserMemory _memory;
+
         /// <summary>
         /// Creates a new chatbot instance and prepares the response engine.
         /// </summary>
@@ -22,6 +24,7 @@ namespace CybersecurityBotWPF
         {
             _userName = userName;
             _responseEngine = new ResponseEngine(userName);
+            _memory = new UserMemory();
         }
 
         /// <summary>
@@ -49,14 +52,39 @@ namespace CybersecurityBotWPF
                 return $"Goodbye, {_userName}. Stay safe online!";
             }
 
+            // Detect favourite cybersecurity interests
+            if (lowerInput.Contains("interested in"))
+            {
+                if (lowerInput.Contains("privacy"))
+                {
+                    _memory.FavouriteTopic = "privacy";
+                    return "Great! I'll remember that you're interested in privacy.";
+                }
+
+                if (lowerInput.Contains("password"))
+                {
+                    _memory.FavouriteTopic = "password safety";
+                    return "Awesome! I'll remember that you're interested in password safety.";
+                }
+
+                if (lowerInput.Contains("phishing"))
+                {
+                    _memory.FavouriteTopic = "phishing";
+                    return "Got it! I'll remember that phishing awareness interests you.";
+                }
+            }
+
             string? response = _responseEngine.GetResponse(input);
 
             if (response != null)
             {
+                if (!string.IsNullOrWhiteSpace(_memory.FavouriteTopic))
+                {
+                    response += $"\n\nSince you're interested in {_memory.FavouriteTopic}, this topic is especially important for you.";
+                }
+
                 return response;
             }
-
-            return $"I'm not sure I understand, {_userName}. Can you try rephrasing? Type 'help' to see what you can ask me.";
         }
 
         /// <summary>
