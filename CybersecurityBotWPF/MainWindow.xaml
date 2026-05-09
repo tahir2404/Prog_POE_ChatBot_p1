@@ -1,0 +1,96 @@
+﻿<Window x:Class="CybersecurityBotWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CybersecurityBotWPF"
+        mc:Ignorable="d"
+        Title="Cybersecurity Awareness Assistant"
+        Height="650"
+        Width="1000"
+        Background="#0F172A">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0"
+                Background="#1E293B"
+                CornerRadius="12"
+                Padding="15"
+                Margin="0,0,0,10">
+
+            <StackPanel>
+
+                <TextBlock Text="🛡 CYBERSECURITY AWARENESS ASSISTANT"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="Cyan"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Protecting South African Citizens Online"
+                           FontSize="14"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+
+            </StackPanel>
+        </Border>
+
+        <!-- CHAT AREA -->
+        <Border Grid.Row="1"
+                Background="#1E293B"
+                CornerRadius="12"
+                Padding="10">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+                <TextBlock x:Name="ChatDisplay"
+                           TextWrapping="Wrap"
+                           Foreground="White"
+                           FontSize="15"
+                           FontFamily="Consolas"/>
+
+            </ScrollViewer>
+        </Border>
+
+        <!-- INPUT AREA -->
+        <Grid Grid.Row="2"
+              Margin="0,10,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="UserInputBox"
+                     Grid.Column="0"
+                     Height="45"
+                     FontSize="16"
+                     VerticalContentAlignment="Center"
+                     Padding="10"
+                     Background="#334155"
+                     Foreground="White"
+                     BorderBrush="Cyan"
+                     CaretBrush="White"/>
+
+            <Button x:Name="SendButton"
+                    Grid.Column="1"
+                    Content="Send"
+                    Height="45"
+                    Margin="10,0,0,0"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Background="Cyan"
+                    Foreground="Black"
+                    Click="SendButton_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
