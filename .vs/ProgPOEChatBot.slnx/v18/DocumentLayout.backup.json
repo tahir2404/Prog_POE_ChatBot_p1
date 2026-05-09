@@ -42,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CybersecurityBotWPF",
-              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
-              "RelativeDocumentMoniker": "CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
-              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
-              "RelativeToolTip": "CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-09T07:48:48.749Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -140,6 +127,19 @@
               "ViewState": "AgIAADsAAAAAAAAAAAAwwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T07:22:50.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CybersecurityBotWPF",
+              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
+              "RelativeDocumentMoniker": "CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
+              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
+              "RelativeToolTip": "CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-09T07:48:48.749Z",
               "EditorCaption": ""
             },
             {

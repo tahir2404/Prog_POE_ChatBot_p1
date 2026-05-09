@@ -1,144 +1,154 @@
-﻿
-// Contains all predefined cybersecurity responses.
-// Stores keyword-to-response mappings in a Dictionary.
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace CybersecurityBot
+namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Manages all predefined chatbot responses.
-    /// Matches user input against known cybersecurity keywords
-    /// and returns the appropriate response.
+    /// Manages all chatbot responses for cybersecurity topics.
+    /// Uses a dictionary of keyword lists so the bot can give random,
+    /// varied responses instead of repeating the same answer.
+    /// </summary>
     public class ResponseEngine
     {
-
         /// <summary>
-        /// The current user's name. Used to personalise responses.
+        /// The current user's name. Used to personalise chatbot responses.
+        /// </summary>
         public string UserName { get; private set; }
 
-        private readonly Dictionary<string, string> _responses;
+        // Random object used to choose different responses from each topic list
+        private readonly Random _random = new Random();
 
+        // Stores keywords and multiple possible responses for each keyword
+        private readonly Dictionary<string, List<string>> _responses;
 
         /// <summary>
         /// Creates a new ResponseEngine for the given user.
-        /// Pre-loads all keyword responses into the dictionary on startup.
-       
+        /// Loads all predefined keyword responses into the dictionary.
+        /// </summary>
+        /// <param name="userName">The name of the current user.</param>
         public ResponseEngine(string userName)
         {
             UserName = userName;
             _responses = BuildResponses();
         }
 
-
         /// <summary>
-        /// Builds and returns the full dictionary of keyword-to-response.
-       
-        private Dictionary<string, string> BuildResponses()
+        /// Builds the dictionary that links cybersecurity keywords
+        /// to lists of possible chatbot responses.
+        /// </summary>
+        /// <returns>A dictionary containing keywords and response lists.</returns>
+        private Dictionary<string, List<string>> BuildResponses()
         {
-            return new Dictionary<string, string>
+            return new Dictionary<string, List<string>>
             {
+                ["how are you"] = new List<string>
+                {
+                    $"I'm running perfectly and fully focused on keeping you cyber-safe, {UserName}!",
+                    $"I'm doing great, {UserName}. Ready to help you stay safe online."
+                },
 
-                ["how are you"] =
-                    $"I'm running perfectly and fully focused on keeping you cyber-safe, {UserName}! " +
-                    "Cybersecurity never sleeps — and neither do I. ",
+                ["purpose"] = new List<string>
+                {
+                    $"My purpose is to educate South African citizens about cybersecurity threats, {UserName}. I can help with phishing, scams, passwords, malware, privacy and safe browsing.",
+                    $"I'm here to help you understand online safety in a simple way, {UserName}. Think of me as your digital safety guide."
+                },
 
-                ["purpose"] =
-                    $"Great question, {UserName}! My purpose is to educate South African citizens about " +
-                    "cybersecurity threats. I can help you recognise phishing scams, create strong " +
-                    "passwords, browse safely, and protect your personal information online. " +
-                    "Think of me as your digital safety guide!",
+                ["what can i ask"] = new List<string>
+                {
+                    "You can ask me about passwords, phishing, scams, privacy, safe browsing, malware, and social engineering.",
+                    "Try asking about password safety, phishing tips, online scams, privacy settings, or safe browsing habits."
+                },
 
-                ["what can i ask"] =
-                    "You can ask me about passwords, phishing, safe browsing, malware, " +
-                    "social engineering, and online privacy. Type 'help' to see the full menu!",
+                ["help"] = new List<string>
+                {
+                    "You can ask me about:\n\n• password safety\n• phishing\n• scams\n• privacy\n• safe browsing\n• malware\n• social engineering\n\nYou can also ask for another tip or say tell me more."
+                },
 
-                // Cybersecurity Topics 
+                ["password"] = new List<string>
+                {
+                    $"Password safety tip for you, {UserName}: use long, unique passwords for every account.",
+                    "A strong password should include uppercase letters, lowercase letters, numbers, and special symbols.",
+                    "Never reuse the same password on different websites. If one account is hacked, the others could be at risk.",
+                    "Use a trusted password manager to store your passwords safely.",
+                    "Enable two-factor authentication whenever possible for extra account protection."
+                },
 
-                ["password"] =
-                    $" Password Safety Tips for you, {UserName}:\n\n" +
-                    "  • Use at least 12 characters — the longer the better.\n" +
-                    "  • Mix uppercase, lowercase, numbers, and special symbols.\n" +
-                    "  • Never reuse the same password on multiple sites.\n" +
-                    "  • Use a trusted password manager (e.g. Bitwarden or 1Password).\n" +
-                    "  • Enable Two-Factor Authentication (2FA) wherever possible.\n" +
-                    "  • Never share your password — not even with IT support!\n" +
-                    "  • Change your passwords regularly, especially after a data breach.",
+                ["phishing"] = new List<string>
+                {
+                    "Be careful of emails asking for personal information. Scammers often pretend to be trusted organisations.",
+                    "Always check the sender's email address carefully before clicking links or downloading attachments.",
+                    "Phishing messages often use urgent language like 'your account will be closed'. Stay calm and verify first.",
+                    "Hover over links before clicking to check where they really go.",
+                    "If you are unsure, go directly to the official website instead of clicking the link."
+                },
 
-                ["phishing"] =
-                    " How to Spot a Phishing Scam:\n\n" +
-                    "  • Carefully check the sender's email address for subtle misspellings.\n" +
-                    "  • Hover over links BEFORE clicking to preview the real URL.\n" +
-                    "  • Be suspicious of urgent messages like 'Your account will be closed!'\n" +
-                    "  • Legitimate organisations will NEVER ask for your password via email.\n" +
-                    "  • Poor grammar and spelling are common phishing red flags.\n" +
-                    "  • When in doubt, go directly to the website by typing the URL yourself.\n" +
-                    "  • Report phishing emails to your email provider.",
+                ["scam"] = new List<string>
+                {
+                    "Online scams often pressure you to act quickly. Take your time and verify before responding.",
+                    "Never share your banking PIN, password, or OTP with anyone, even if they claim to be from your bank.",
+                    "If an offer sounds too good to be true, it is probably a scam.",
+                    "Scammers may pretend to be from trusted companies or government departments. Always verify using official contact details.",
+                    "Be careful of WhatsApp, SMS, and email messages asking you to click unknown links."
+                },
 
-                ["browsing"] =
-                    " Safe Browsing Habits:\n\n" +
-                    "  • Always look for 'https://' and the padlock icon in the address bar.\n" +
-                    "  • Avoid using public Wi-Fi for banking or any sensitive activity.\n" +
-                    "  • If you must use public Wi-Fi, connect through a reputable VPN.\n" +
-                    "  • Keep your browser and all extensions up to date.\n" +
-                    "  • Only download software from official, trusted websites.\n" +
-                    "  • Clear your cookies and cache regularly to protect your privacy.\n" +
-                    "  • Be cautious of pop-ups asking you to install anything.",
+                ["privacy"] = new List<string>
+                {
+                    $"Privacy tip, {UserName}: review your social media privacy settings regularly.",
+                    "Avoid sharing too much personal information online, such as your address, school, ID number, or daily routine.",
+                    "Use strong privacy settings on apps and websites to control who can see your information.",
+                    "Be careful when posting photos that reveal your location or private details.",
+                    "Regularly check app permissions and remove access you no longer need."
+                },
 
-                ["malware"] =
-                    " Malware — What It Is and How to Stay Protected:\n\n" +
-                    "  • Malware is malicious software designed to damage or access your device.\n" +
-                    "  • Common types: viruses, ransomware, spyware, trojans, and adware.\n" +
-                    "  • Install a reputable antivirus program and keep it updated.\n" +
-                    "  • Never open email attachments from unknown or unexpected senders.\n" +
-                    "  • Avoid clicking on pop-up ads — they often install malware silently.\n" +
-                    "  • Regularly back up your files to an external drive or secure cloud.\n" +
-                    "  • Keep your operating system updated — patches fix security holes.",
+                ["browsing"] = new List<string>
+                {
+                    "Safe browsing tip: only visit websites you trust and check for https:// in the address bar.",
+                    "Avoid entering personal information on websites that do not have a secure padlock icon.",
+                    "Be careful with pop-ups that ask you to download software or claim your device is infected.",
+                    "Avoid using public Wi-Fi for banking or sensitive activities unless you are using a trusted VPN.",
+                    "Keep your browser and extensions updated to reduce security risks."
+                },
 
-                ["social"] =
-                    " Social Engineering Awareness:\n\n" +
-                    "  • Social engineering manipulates people — not computers — into giving up info.\n" +
-                    "  • Pretexting: Someone pretends to be a trusted authority (e.g. SARS, your bank).\n" +
-                    "  • Baiting: Infected USB drives left in public, hoping someone plugs one in.\n" +
-                    "  • Vishing: Scam phone calls pretending to be from your bank or government.\n" +
-                    "  • Always verify the identity of anyone requesting sensitive information.\n" +
-                    "  • It is okay to hang up and call back on the official published number.\n" +
-                    "  • When something feels off — trust your instincts and verify first.",
+                ["malware"] = new List<string>
+                {
+                    "Malware is harmful software that can damage your device or steal information.",
+                    "Avoid opening email attachments from unknown or unexpected senders.",
+                    "Install trusted antivirus software and keep it updated.",
+                    "Only download apps and software from official websites or app stores.",
+                    "Back up your important files so you are protected if ransomware attacks your device."
+                },
 
-                ["privacy"] =
-                    $" Protecting Your Personal Information, {UserName}:\n\n" +
-                    "  • Limit the personal details you share publicly on social media.\n" +
-                    "  • Regularly review and tighten privacy settings on all your accounts.\n" +
-                    "  • Be careful what you share in public forums — it can be used against you.\n" +
-                    "  • Shred physical documents containing personal info before disposing.\n" +
-                    "  • Monitor your bank statements regularly for any suspicious activity.\n" +
-                    "  • In South Africa, report identity theft to the SAFPS (safps.org.za).\n" +
-                    "  • Use unique email addresses for important accounts where possible.",
+                ["social"] = new List<string>
+                {
+                    "Social engineering is when criminals trick people into giving away private information.",
+                    "Always verify the identity of someone asking for sensitive information.",
+                    "Do not feel pressured to respond immediately to suspicious calls, messages, or emails.",
+                    "If someone claims to be from your bank, hang up and call the official number yourself.",
+                    "Trust your instincts. If something feels suspicious, verify it first."
+                }
             };
         }
 
-
         /// <summary>
-        /// Looks up a response based on keywords found in the user's input.
-        /// Returns null if no matching keyword is found.
-        
+        /// Searches the user's input for a recognised keyword.
+        /// If a keyword is found, the method returns a random response
+        /// from that keyword's response list.
+        /// </summary>
+        /// <param name="userInput">The message typed by the user.</param>
+        /// <returns>A chatbot response if a keyword is found, otherwise null.</returns>
         public string? GetResponse(string userInput)
         {
-            // Normalise: remove surrounding whitespace and convert to lowercase
             string normalised = userInput.Trim().ToLower();
 
-            // Check each keyword against the normalised input
-            foreach (KeyValuePair<string, string> entry in _responses)
+            foreach (KeyValuePair<string, List<string>> entry in _responses)
             {
-                // String.Contains checks if the keyword appears anywhere in the input
                 if (normalised.Contains(entry.Key))
                 {
-                    return entry.Value;
+                    int index = _random.Next(entry.Value.Count);
+                    return entry.Value[index];
                 }
             }
 
-            // No keyword matched
             return null;
         }
     }
