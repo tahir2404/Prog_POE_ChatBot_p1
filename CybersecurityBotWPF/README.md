@@ -111,19 +111,19 @@ You can ask the chatbot questions such as:
 Add screenshots of:
 
 * Main chatbot GUI
-
+![Main GUI](Screenshots/ChatbotGUI.png)
 
 
 * Chat conversation example
-
+![Chat conversation](Screenshots/Chatbot Example.png)
 
 
 * Sentiment detection example
-
+![Sentiment detection](Screenshots/chatbot sentiment detection.png)
 
 
 * Memory and recall example
-
+![Memory and recall](Screenshots/chatbot memory and recall example.png)
 
 
 ---
