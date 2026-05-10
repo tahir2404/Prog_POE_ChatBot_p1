@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\responseengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\conversationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\conversationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\audiohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot_p1\\cybersecuritybotwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Responseengine.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\Responseengine.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\Responseengine.cs",
@@ -71,20 +71,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ChatBot.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\ChatBot.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\ChatBot.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\ChatBot.cs",
               "RelativeToolTip": "CybersecurityBotWPF\\ChatBot.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAIwHwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T07:36:19.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ConversationManager.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\ConversationManager.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\ConversationManager.cs",
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SentimentDetector.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\SentimentDetector.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\SentimentDetector.cs",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserMemory.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\UserMemory.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\UserMemory.cs",
@@ -123,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\MainWindow.xaml",
@@ -135,20 +135,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "CybersecurityBotWPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T07:22:50.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CybersecurityBotWPF",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\CybersecurityBotWPF.csproj",
@@ -161,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AudioHelper.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot_p1\\CybersecurityBotWPF\\AudioHelper.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\AudioHelper.cs",

@@ -104,6 +104,20 @@ namespace CybersecurityBotWPF
                 return "I love your curiosity about cybersecurity! Learning about online safety is one of the best ways to protect yourself.";
             }
 
+            // Handle follow-up conversation flow
+            if (lowerInput.Contains("tell me more") ||
+                lowerInput.Contains("another tip") ||
+                lowerInput.Contains("explain more"))
+            {
+                if (!string.IsNullOrWhiteSpace(_memory.LastTopic))
+                {
+                    return $"Here is another important {_memory.LastTopic} tip:\n\n" +
+                           _responseEngine.GetResponse(_memory.LastTopic);
+                }
+
+                return "Please ask about a cybersecurity topic first so I know what you'd like to learn more about.";
+            }
+
             // Get normal cybersecurity response
             string? response = _responseEngine.GetResponse(input);
 
@@ -114,6 +128,32 @@ namespace CybersecurityBotWPF
                 if (!string.IsNullOrWhiteSpace(_memory.FavouriteTopic))
                 {
                     response += $"\n\nSince you're interested in {_memory.FavouriteTopic}, this topic is especially important for you.";
+                }
+
+                // Remember the last topic discussed
+                if (lowerInput.Contains("password"))
+                {
+                    _memory.LastTopic = "password";
+                }
+                else if (lowerInput.Contains("phishing"))
+                {
+                    _memory.LastTopic = "phishing";
+                }
+                else if (lowerInput.Contains("scam"))
+                {
+                    _memory.LastTopic = "scam";
+                }
+                else if (lowerInput.Contains("privacy"))
+                {
+                    _memory.LastTopic = "privacy";
+                }
+                else if (lowerInput.Contains("malware"))
+                {
+                    _memory.LastTopic = "malware";
+                }
+                else if (lowerInput.Contains("social"))
+                {
+                    _memory.LastTopic = "social engineering";
                 }
 
                 return response;
