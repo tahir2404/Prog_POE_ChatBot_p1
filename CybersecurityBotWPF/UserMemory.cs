@@ -1,8 +1,7 @@
 ﻿namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Stores information the chatbot remembers about the user.
-    /// Used to personalise chatbot conversations.
+    /// Stores information the chatbot remembers about the user. Used to personalise chatbot conversations.
     /// </summary>
     public class UserMemory
     {
@@ -12,8 +11,7 @@
         public string FavouriteTopic { get; set; } = "";
 
         /// <summary>
-        /// Stores the last cybersecurity topic discussed.
-        /// Used for follow-up conversation flow.
+        /// Stores the last cybersecurity topic discussed. Used for follow-up conversation flow.
         /// </summary>
         public string LastTopic { get; set; } = "";
     }

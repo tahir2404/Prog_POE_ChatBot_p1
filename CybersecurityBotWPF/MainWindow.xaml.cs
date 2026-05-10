@@ -7,9 +7,7 @@ using System.Windows.Media;
 namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Interaction logic for the main chatbot window.
-    /// Handles user interaction, message display,
-    /// and communication between the GUI and chatbot logic.
+    /// Interaction logic for the main chatbot window. Handles user interaction, message display and communication between the GUI and chatbot logic.
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -23,10 +21,7 @@ namespace CybersecurityBotWPF
         private string _userName = "User";
 
         /// <summary>
-        /// Constructor for the MainWindow.
-        /// Initialises the GUI components,
-        /// plays the greeting audio,
-        /// and displays the startup messages.
+        /// Constructor for the MainWindow.Initialises the GUI components, plays the greeting audio and displays the startup messages.
         /// </summary>
         public MainWindow()
         {
@@ -41,8 +36,7 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Triggered when the Send button is clicked.
-        /// Sends the user's message to the chatbot.
+        /// Triggered when the Send button is clicked. Sends the user's message to the chatbot.
         /// </summary>
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
@@ -50,8 +44,7 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Allows the Enter key to submit messages
-        /// instead of only using the Send button.
+        /// Allows the Enter key to submit messages instead of only using the Send button.
         /// </summary>
         private void UserInputBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -62,9 +55,7 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Processes the user's input from the textbox.
-        /// If it is the first message, it stores the user's name.
-        /// After that, it sends normal questions to the chatbot.
+        /// Processes the user's input from the textbox. If it is the first message it stores the user's name. After that it sends normal questions to the chatbot.
         /// </summary>
         private void HandleUserInput()
         {
@@ -102,14 +93,11 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Displays a formatted user message
-        /// in the chat display area.
+        /// Displays a formatted user message in the chat display area.
         /// </summary>
         /// <summary>
-        /// Displays the user's message on the right side of the chat area
-        /// using a styled message bubble.
+        /// Displays the user's message on the right side of the chat area using a styled message bubble.
         /// </summary>
-        /// <param name="message">The user's message.</param>
         private void AddUserMessage(string message)
         {
             TextBlock messageText = new TextBlock
@@ -136,10 +124,8 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Displays the chatbot's message on the left side of the chat area
-        /// using a styled message bubble.
+        /// Displays the chatbot's message on the left side of the chat area using a styled message bubble.
         /// </summary>
-        /// <param name="message">The chatbot response.</param>
         private void AddBotMessage(string message)
         {
             TextBlock messageText = new TextBlock

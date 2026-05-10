@@ -5,8 +5,7 @@ using System.Media;
 namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Static helper class that handles audio playback for the chatbot.
-    /// Plays the WAV voice greeting when the WPF application starts.
+    /// Static helper class that handles audio playback for the chatbot. Plays the WAV voice greeting when the WPF application starts.
     /// </summary>
     public static class AudioHelper
     {
@@ -14,10 +13,8 @@ namespace CybersecurityBotWPF
         private const string GreetingFilePath = "Assets/greeting.wav";
 
         /// <summary>
-        /// Plays the greeting audio file when the application opens.
-        /// Returns a message so the GUI can handle success or error feedback if needed.
+        /// Plays the greeting audio file when the application opens. Returns a message so the GUI can handle success or error feedback if needed.
         /// </summary>
-        /// <returns>Status message showing whether the audio played successfully.</returns>
         public static string PlayGreeting()
         {
             try

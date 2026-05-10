@@ -4,9 +4,7 @@ using System.Collections.Generic;
 namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Manages all chatbot responses for cybersecurity topics.
-    /// Uses a dictionary of keyword lists so the bot can give random,
-    /// varied responses instead of repeating the same answer.
+    /// Manages all chatbot responses for cybersecurity topics. Uses a dictionary of keyword lists so the bot can give random, varied responses instead of repeating the same answer.
     /// </summary>
     public class ResponseEngine
     {
@@ -22,10 +20,8 @@ namespace CybersecurityBotWPF
         private readonly Dictionary<string, List<string>> _responses;
 
         /// <summary>
-        /// Creates a new ResponseEngine for the given user.
-        /// Loads all predefined keyword responses into the dictionary.
+        /// Creates a new ResponseEngine for the given user. Loads all predefined keyword responses into the dictionary.
         /// </summary>
-        /// <param name="userName">The name of the current user.</param>
         public ResponseEngine(string userName)
         {
             UserName = userName;
@@ -33,10 +29,8 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Builds the dictionary that links cybersecurity keywords
-        /// to lists of possible chatbot responses.
+        /// Builds the dictionary that links cybersecurity keywords to lists of possible chatbot responses.
         /// </summary>
-        /// <returns>A dictionary containing keywords and response lists.</returns>
         private Dictionary<string, List<string>> BuildResponses()
         {
             return new Dictionary<string, List<string>>
@@ -130,12 +124,8 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Searches the user's input for a recognised keyword.
-        /// If a keyword is found, the method returns a random response
-        /// from that keyword's response list.
+        /// Searches the user's input for a recognised keyword. If a keyword is found, the method returns a random response from that keyword's response list.
         /// </summary>
-        /// <param name="userInput">The message typed by the user.</param>
-        /// <returns>A chatbot response if a keyword is found, otherwise null.</returns>
         public string? GetResponse(string userInput)
         {
             string normalised = userInput.Trim().ToLower();

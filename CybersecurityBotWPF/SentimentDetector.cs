@@ -1,16 +1,13 @@
 ﻿namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Detects basic user sentiment from chatbot messages.
-    /// Used to make responses feel more natural and empathetic.
+    /// Detects basic user sentiment from chatbot messages. Used to make responses feel more natural and empathetic.
     /// </summary>
     public class SentimentDetector
     {
         /// <summary>
         /// Detects the emotional tone of the user's message.
         /// </summary>
-        /// <param name="input">The user's message.</param>
-        /// <returns>The detected sentiment as text.</returns>
         public string DetectSentiment(string input)
         {
             string lowerInput = input.ToLower();

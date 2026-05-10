@@ -3,8 +3,7 @@
 namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Handles the main chatbot logic for the WPF application.
-    /// This class receives user input from the GUI and returns chatbot responses.
+    /// Handles the main chatbot logic for the WPF application. This class receives user input from the GUI and returns chatbot responses.
     /// </summary>
     public class ChatBot
     {
@@ -21,7 +20,6 @@ namespace CybersecurityBotWPF
         /// <summary>
         /// Creates a new chatbot instance and prepares the response engine.
         /// </summary>
-        /// <param name="userName">The name of the current user.</param>
         public ChatBot(string userName)
         {
             _userName = userName;
@@ -31,11 +29,8 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Processes the user's message and returns an appropriate chatbot response.
-        /// This replaces the old console-based StartChat method.
+        /// Processes the user's message and returns an appropriate chatbot response. This replaces the old console-based StartChat method.
         /// </summary>
-        /// <param name="input">The message entered by the user.</param>
-        /// <returns>A chatbot response as text.</returns>
         public string GetBotResponse(string input)
         {
             // Prevent empty input
@@ -166,7 +161,6 @@ namespace CybersecurityBotWPF
         /// <summary>
         /// Returns the list of cybersecurity topics the chatbot can help with.
         /// </summary>
-        /// <returns>A formatted help message with available topics.</returns>
         private string GetHelpMessage()
         {
             return
