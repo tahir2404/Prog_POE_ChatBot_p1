@@ -48,13 +48,10 @@
                 CornerRadius="12"
                 Padding="10">
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ScrollViewer x:Name="ChatScrollViewer"
+              VerticalScrollBarVisibility="Auto">
 
-                <TextBlock x:Name="ChatDisplay"
-                           TextWrapping="Wrap"
-                           Foreground="White"
-                           FontSize="15"
-                           FontFamily="Consolas"/>
+                <StackPanel x:Name="ChatPanel"/>
 
             </ScrollViewer>
         </Border>

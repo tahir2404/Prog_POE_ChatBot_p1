@@ -1,6 +1,8 @@
 ﻿using CybersecurityBotWPF;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace CybersecurityBotWPF
 {
@@ -103,18 +105,64 @@ namespace CybersecurityBotWPF
         /// Displays a formatted user message
         /// in the chat display area.
         /// </summary>
+        /// <summary>
+        /// Displays the user's message on the right side of the chat area
+        /// using a styled message bubble.
+        /// </summary>
+        /// <param name="message">The user's message.</param>
         private void AddUserMessage(string message)
         {
-            ChatDisplay.Text += $"\nYou: {message}\n";
+            TextBlock messageText = new TextBlock
+            {
+                Text = message,
+                TextWrapping = TextWrapping.Wrap,
+                Foreground = Brushes.Black,
+                FontSize = 14
+            };
+
+            Border bubble = new Border
+            {
+                Background = Brushes.Cyan,
+                CornerRadius = new CornerRadius(12),
+                Padding = new Thickness(10),
+                Margin = new Thickness(80, 5, 5, 5),
+                HorizontalAlignment = HorizontalAlignment.Right,
+                MaxWidth = 500,
+                Child = messageText
+            };
+
+            ChatPanel.Children.Add(bubble);
+            ChatScrollViewer.ScrollToEnd();
         }
 
         /// <summary>
-        /// Displays a formatted chatbot response
-        /// in the chat display area.
+        /// Displays the chatbot's message on the left side of the chat area
+        /// using a styled message bubble.
         /// </summary>
+        /// <param name="message">The chatbot response.</param>
         private void AddBotMessage(string message)
         {
-            ChatDisplay.Text += $"Bot: {message}\n";
+            TextBlock messageText = new TextBlock
+            {
+                Text = message,
+                TextWrapping = TextWrapping.Wrap,
+                Foreground = Brushes.White,
+                FontSize = 14
+            };
+
+            Border bubble = new Border
+            {
+                Background = new SolidColorBrush(Color.FromRgb(51, 65, 85)),
+                CornerRadius = new CornerRadius(12),
+                Padding = new Thickness(10),
+                Margin = new Thickness(5, 5, 80, 5),
+                HorizontalAlignment = HorizontalAlignment.Left,
+                MaxWidth = 600,
+                Child = messageText
+            };
+
+            ChatPanel.Children.Add(bubble);
+            ChatScrollViewer.ScrollToEnd();
         }
     }
 }
