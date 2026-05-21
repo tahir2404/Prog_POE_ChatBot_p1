@@ -1,4 +1,5 @@
 ﻿using CybersecurityBotWPF.Tasks;
+using CybersecurityBotWPF.Quiz;
 
 namespace CybersecurityBotWPF
 {
@@ -23,6 +24,8 @@ namespace CybersecurityBotWPF
         // Manages cybersecurity-related tasks
         private readonly TaskManager _taskManager;
 
+        private readonly QuizManager _quizManager;
+
         /// <summary>
         /// Creates a new chatbot instance and prepares all helper classes.
         /// </summary>
@@ -34,6 +37,7 @@ namespace CybersecurityBotWPF
             _memory = new UserMemory();
             _sentimentDetector = new SentimentDetector();
             _taskManager = new TaskManager();
+            _quizManager = new QuizManager();
         }
 
         /// <summary>
@@ -58,6 +62,20 @@ namespace CybersecurityBotWPF
             if (lowerInput == "quit" || lowerInput == "exit" || lowerInput == "bye")
             {
                 return $"Goodbye, {_userName}. Stay safe online!";
+            }
+
+            // If the quiz is active, treat the user's next message as a quiz answer
+            if (_quizManager.IsQuizActive)
+            {
+                return _quizManager.SubmitAnswer(input);
+            }
+
+            // Start the cybersecurity quiz
+            if (lowerInput.Contains("start quiz") ||
+                lowerInput.Contains("quiz") ||
+                lowerInput.Contains("play game"))
+            {
+                return _quizManager.StartQuiz();
             }
 
             // Add a cybersecurity task
@@ -271,7 +289,10 @@ namespace CybersecurityBotWPF
                 "• show my tasks\n" +
                 "• complete task update my password\n" +
                 "• delete task update my password\n\n" +
-                "You can also say 'tell me more' or 'another tip'.";
+                "You can also say 'tell me more' or 'another tip'." +
+                "Quiz commands:\n" +
+                "• start quiz\n" +
+                "• play game\n\n";
         }
     }
 }
