@@ -1,5 +1,5 @@
-﻿using CybersecurityBotWPF.Tasks;
-using CybersecurityBotWPF.Quiz;
+﻿using CybersecurityBotWPF.Quiz;
+using CybersecurityBotWPF.Tasks;
 
 namespace CybersecurityBotWPF
 {
@@ -9,27 +9,17 @@ namespace CybersecurityBotWPF
     /// </summary>
     public class ChatBot
     {
-        // Stores the user's name for personalised responses
         private readonly string _userName;
-
-        // Handles keyword-based cybersecurity responses
         private readonly ResponseEngine _responseEngine;
-
-        // Stores user memory such as favourite topic and last topic discussed
         private readonly UserMemory _memory;
-
-        // Detects simple user emotions such as worried, frustrated, and curious
         private readonly SentimentDetector _sentimentDetector;
-
-        // Manages cybersecurity-related tasks
         private readonly TaskManager _taskManager;
-
         private readonly QuizManager _quizManager;
+        private readonly ActivityLog _activityLog;
 
         /// <summary>
         /// Creates a new chatbot instance and prepares all helper classes.
         /// </summary>
-        /// <param name="userName">The name of the current user.</param>
         public ChatBot(string userName)
         {
             _userName = userName;
@@ -38,13 +28,12 @@ namespace CybersecurityBotWPF
             _sentimentDetector = new SentimentDetector();
             _taskManager = new TaskManager();
             _quizManager = new QuizManager();
+            _activityLog = new ActivityLog();
         }
 
         /// <summary>
         /// Processes the user's message and returns an appropriate chatbot response.
         /// </summary>
-        /// <param name="input">The message entered by the user.</param>
-        /// <returns>A chatbot response as text.</returns>
         public string GetBotResponse(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -64,21 +53,27 @@ namespace CybersecurityBotWPF
                 return $"Goodbye, {_userName}. Stay safe online!";
             }
 
-            // If the quiz is active, treat the user's next message as a quiz answer
+            if (lowerInput.Contains("show activity log") ||
+                lowerInput.Contains("activity log") ||
+                lowerInput.Contains("what have you done for me"))
+            {
+                return _activityLog.GetRecentActions();
+            }
+
             if (_quizManager.IsQuizActive)
             {
+                _activityLog.AddAction("Quiz answer submitted");
                 return _quizManager.SubmitAnswer(input);
             }
 
-            // Start the cybersecurity quiz
             if (lowerInput.Contains("start quiz") ||
                 lowerInput.Contains("quiz") ||
                 lowerInput.Contains("play game"))
             {
+                _activityLog.AddAction("Cybersecurity quiz started");
                 return _quizManager.StartQuiz();
             }
 
-            // Add a cybersecurity task
             if (lowerInput.Contains("add task"))
             {
                 string taskTitle = input
@@ -99,11 +94,11 @@ namespace CybersecurityBotWPF
                 };
 
                 _taskManager.AddTask(newTask);
+                _activityLog.AddAction($"Task added: {taskTitle}");
 
                 return $"Task added: {taskTitle}";
             }
 
-            // Show all cybersecurity tasks
             if (lowerInput.Contains("show tasks") ||
                 lowerInput.Contains("show my tasks") ||
                 lowerInput.Contains("view tasks"))
@@ -125,7 +120,6 @@ namespace CybersecurityBotWPF
                 return taskList;
             }
 
-            // Mark a task as completed
             if (lowerInput.Contains("complete task"))
             {
                 string taskTitle = input
@@ -139,12 +133,15 @@ namespace CybersecurityBotWPF
 
                 bool completed = _taskManager.CompleteTask(taskTitle);
 
-                return completed
-                    ? $"Task completed: {taskTitle}"
-                    : $"I could not find a task called: {taskTitle}";
+                if (completed)
+                {
+                    _activityLog.AddAction($"Task completed: {taskTitle}");
+                    return $"Task completed: {taskTitle}";
+                }
+
+                return $"I could not find a task called: {taskTitle}";
             }
 
-            // Delete a cybersecurity task
             if (lowerInput.Contains("delete task"))
             {
                 string taskTitle = input
@@ -158,12 +155,15 @@ namespace CybersecurityBotWPF
 
                 bool deleted = _taskManager.DeleteTask(taskTitle);
 
-                return deleted
-                    ? $"Task deleted: {taskTitle}"
-                    : $"I could not find a task called: {taskTitle}";
+                if (deleted)
+                {
+                    _activityLog.AddAction($"Task deleted: {taskTitle}");
+                    return $"Task deleted: {taskTitle}";
+                }
+
+                return $"I could not find a task called: {taskTitle}";
             }
 
-            // Detect favourite cybersecurity interests
             if (lowerInput.Contains("interested in"))
             {
                 if (lowerInput.Contains("privacy"))
@@ -191,7 +191,6 @@ namespace CybersecurityBotWPF
                 }
             }
 
-            // Detect the user's emotional tone
             string sentiment = _sentimentDetector.DetectSentiment(input);
 
             if (sentiment == "worried")
@@ -211,7 +210,6 @@ namespace CybersecurityBotWPF
                 return "I love your curiosity about cybersecurity! Learning about online safety is one of the best ways to protect yourself.";
             }
 
-            // Handle follow-up conversation flow
             if (lowerInput.Contains("tell me more") ||
                 lowerInput.Contains("another tip") ||
                 lowerInput.Contains("explain more"))
@@ -230,33 +228,19 @@ namespace CybersecurityBotWPF
             if (response != null)
             {
                 if (lowerInput.Contains("password"))
-                {
                     _memory.LastTopic = "password";
-                }
                 else if (lowerInput.Contains("phishing"))
-                {
                     _memory.LastTopic = "phishing";
-                }
                 else if (lowerInput.Contains("scam"))
-                {
                     _memory.LastTopic = "scam";
-                }
                 else if (lowerInput.Contains("privacy"))
-                {
                     _memory.LastTopic = "privacy";
-                }
                 else if (lowerInput.Contains("malware"))
-                {
                     _memory.LastTopic = "malware";
-                }
                 else if (lowerInput.Contains("social"))
-                {
                     _memory.LastTopic = "social engineering";
-                }
                 else if (lowerInput.Contains("browsing"))
-                {
                     _memory.LastTopic = "safe browsing";
-                }
 
                 if (!string.IsNullOrWhiteSpace(_memory.FavouriteTopic))
                 {
@@ -272,7 +256,6 @@ namespace CybersecurityBotWPF
         /// <summary>
         /// Returns the list of cybersecurity topics and commands the chatbot can help with.
         /// </summary>
-        /// <returns>A formatted help message.</returns>
         private string GetHelpMessage()
         {
             return
@@ -289,10 +272,13 @@ namespace CybersecurityBotWPF
                 "• show my tasks\n" +
                 "• complete task update my password\n" +
                 "• delete task update my password\n\n" +
-                "You can also say 'tell me more' or 'another tip'." +
                 "Quiz commands:\n" +
                 "• start quiz\n" +
-                "• play game\n\n";
+                "• play game\n\n" +
+                "Activity log commands:\n" +
+                "• show activity log\n" +
+                "• what have you done for me\n\n" +
+                "You can also say 'tell me more' or 'another tip'.";
         }
     }
 }
