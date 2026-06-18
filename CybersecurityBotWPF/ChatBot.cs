@@ -16,6 +16,7 @@ namespace CybersecurityBotWPF
         private readonly TaskManager _taskManager;
         private readonly QuizManager _quizManager;
         private readonly ActivityLog _activityLog;
+        private readonly NlpProcessor _nlpProcessor;
 
         /// <summary>
         /// Creates a new chatbot instance and prepares all helper classes.
@@ -29,6 +30,7 @@ namespace CybersecurityBotWPF
             _taskManager = new TaskManager();
             _quizManager = new QuizManager();
             _activityLog = new ActivityLog();
+            _nlpProcessor = new NlpProcessor();
         }
 
         /// <summary>
@@ -42,6 +44,7 @@ namespace CybersecurityBotWPF
             }
 
             string lowerInput = input.ToLower();
+            string intent = _nlpProcessor.DetectIntent(input);
 
             if (lowerInput == "help" || lowerInput.Contains("what can i ask"))
             {
@@ -53,9 +56,7 @@ namespace CybersecurityBotWPF
                 return $"Goodbye, {_userName}. Stay safe online!";
             }
 
-            if (lowerInput.Contains("show activity log") ||
-                lowerInput.Contains("activity log") ||
-                lowerInput.Contains("what have you done for me"))
+            if (intent == "activity_log")
             {
                 return _activityLog.GetRecentActions();
             }
@@ -66,18 +67,18 @@ namespace CybersecurityBotWPF
                 return _quizManager.SubmitAnswer(input);
             }
 
-            if (lowerInput.Contains("start quiz") ||
-                lowerInput.Contains("quiz") ||
-                lowerInput.Contains("play game"))
+            if (intent == "start_quiz")
             {
                 _activityLog.AddAction("Cybersecurity quiz started");
                 return _quizManager.StartQuiz();
             }
 
-            if (lowerInput.Contains("add task"))
+            if (intent == "add_task")
             {
                 string taskTitle = input
                     .Replace("add task", "", System.StringComparison.OrdinalIgnoreCase)
+                    .Replace("create task", "", System.StringComparison.OrdinalIgnoreCase)
+                    .Replace("remind me", "", System.StringComparison.OrdinalIgnoreCase)
                     .Replace("to", "", System.StringComparison.OrdinalIgnoreCase)
                     .Trim();
 
@@ -99,9 +100,7 @@ namespace CybersecurityBotWPF
                 return $"Task added: {taskTitle}";
             }
 
-            if (lowerInput.Contains("show tasks") ||
-                lowerInput.Contains("show my tasks") ||
-                lowerInput.Contains("view tasks"))
+            if (intent == "show_tasks")
             {
                 var tasks = _taskManager.GetTasks();
 
@@ -120,7 +119,7 @@ namespace CybersecurityBotWPF
                 return taskList;
             }
 
-            if (lowerInput.Contains("complete task"))
+            if (intent == "complete_task")
             {
                 string taskTitle = input
                     .Replace("complete task", "", System.StringComparison.OrdinalIgnoreCase)
@@ -142,7 +141,7 @@ namespace CybersecurityBotWPF
                 return $"I could not find a task called: {taskTitle}";
             }
 
-            if (lowerInput.Contains("delete task"))
+            if (intent == "delete_task")
             {
                 string taskTitle = input
                     .Replace("delete task", "", System.StringComparison.OrdinalIgnoreCase)
@@ -269,6 +268,8 @@ namespace CybersecurityBotWPF
                 "• online privacy\n\n" +
                 "Task commands:\n" +
                 "• add task to update my password\n" +
+                "• remind me to update my password\n" +
+                "• create task to enable two-factor authentication\n" +
                 "• show my tasks\n" +
                 "• complete task update my password\n" +
                 "• delete task update my password\n\n" +
