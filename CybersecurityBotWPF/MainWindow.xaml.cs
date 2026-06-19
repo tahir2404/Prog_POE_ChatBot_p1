@@ -3,6 +3,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
+using CybersecurityBotWPF.Tasks;
+using System.Collections.Generic;
 
 namespace CybersecurityBotWPF
 {
@@ -20,6 +22,8 @@ namespace CybersecurityBotWPF
         // Stores the user's name after the first input
         private string _userName = "User";
 
+        private readonly TaskManager _taskManager = new TaskManager();
+
         /// <summary>
         /// Constructor for the MainWindow.Initialises the GUI components, plays the greeting audio and displays the startup messages.
         /// </summary>
@@ -33,6 +37,8 @@ namespace CybersecurityBotWPF
             // Display startup welcome messages
             AddBotMessage("Welcome to the Cybersecurity Awareness Assistant!");
             AddBotMessage("Please type your name to begin.");
+
+            ShowDueReminders();
         }
 
         /// <summary>
@@ -149,6 +155,29 @@ namespace CybersecurityBotWPF
 
             ChatPanel.Children.Add(bubble);
             ChatScrollViewer.ScrollToEnd();
+        }
+
+        /// <summary>
+        /// Checks the database for due or overdue reminders
+        /// and displays them when the application starts.
+        /// </summary>
+        private void ShowDueReminders()
+        {
+            List<CyberTask> dueTasks = _taskManager.GetDueTasks();
+
+            if (dueTasks.Count == 0)
+            {
+                return;
+            }
+
+            string reminderMessage = "Reminder alert! These cybersecurity tasks are due:\n\n";
+
+            foreach (CyberTask task in dueTasks)
+            {
+                reminderMessage += $"- {task.Title} due on {task.ReminderDate:yyyy-MM-dd}\n";
+            }
+
+            AddBotMessage(reminderMessage);
         }
     }
 }

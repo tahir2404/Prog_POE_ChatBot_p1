@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\nlpprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\nlpprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|solutionrelative:cybersecuritybotwpf\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C8FBDE4-4282-47C8-A47F-7394A64600C2}|CybersecurityBotWPF\\CybersecurityBotWPF.csproj|c:\\users\\tahir\\onedrive\\documents\\github\\prog_poe_chatbot\\cybersecuritybotwpf\\cybertask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,19 +51,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ActivityLog.cs",
-              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\ActivityLog.cs",
-              "RelativeDocumentMoniker": "CybersecurityBotWPF\\ActivityLog.cs",
-              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\ActivityLog.cs",
-              "RelativeToolTip": "CybersecurityBotWPF\\ActivityLog.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwC0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T11:45:30.623Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\DatabaseHelper.cs",
@@ -106,13 +93,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TaskManager.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\TaskManager.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\TaskManager.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\TaskManager.cs",
               "RelativeToolTip": "CybersecurityBotWPF\\TaskManager.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwGkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T11:43:14.129Z",
               "EditorCaption": ""
@@ -132,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ChatBot.cs",
               "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\ChatBot.cs",
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\ChatBot.cs",
@@ -151,9 +138,22 @@
               "RelativeDocumentMoniker": "CybersecurityBotWPF\\NlpProcessor.cs",
               "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\NlpProcessor.cs",
               "RelativeToolTip": "CybersecurityBotWPF\\NlpProcessor.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T11:45:49.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActivityLog.cs",
+              "DocumentMoniker": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\ActivityLog.cs",
+              "RelativeDocumentMoniker": "CybersecurityBotWPF\\ActivityLog.cs",
+              "ToolTip": "C:\\Users\\tahir\\OneDrive\\Documents\\GitHub\\Prog_POE_ChatBot\\CybersecurityBotWPF\\ActivityLog.cs",
+              "RelativeToolTip": "CybersecurityBotWPF\\ActivityLog.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T11:45:30.623Z",
               "EditorCaption": ""
             }
           ]

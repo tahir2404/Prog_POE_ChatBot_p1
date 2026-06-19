@@ -67,6 +67,26 @@ namespace CybersecurityBotWPF.Tasks
         }
 
         /// <summary>
+        /// Returns all overdue or due-today tasks.
+        /// </summary>
+        public List<CyberTask> GetDueTasks()
+        {
+            List<CyberTask> dueTasks = new();
+
+            foreach (CyberTask task in GetTasks())
+            {
+                if (task.ReminderDate.HasValue &&
+                    task.ReminderDate.Value.Date <= DateTime.Today &&
+                    !task.IsCompleted)
+                {
+                    dueTasks.Add(task);
+                }
+            }
+
+            return dueTasks;
+        }
+
+        /// <summary>
         /// Marks a task as completed in the MySQL database using its title.
         /// </summary>
         public bool CompleteTask(string title)
@@ -102,5 +122,6 @@ namespace CybersecurityBotWPF.Tasks
 
             return rowsAffected > 0;
         }
+
     }
 }
