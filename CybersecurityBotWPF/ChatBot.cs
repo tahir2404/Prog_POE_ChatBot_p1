@@ -73,6 +73,44 @@ namespace CybersecurityBotWPF
                 return _quizManager.StartQuiz();
             }
 
+            if (intent == "set_reminder")
+            {
+                try
+                {
+                    string[] parts = input.Split(" on ");
+
+                    if (parts.Length != 2)
+                    {
+                        return "Please use this format:\nremind me on 2026-07-01 to update my password";
+                    }
+
+                    string taskPart = parts[0]
+                        .Replace("remind me", "", System.StringComparison.OrdinalIgnoreCase)
+                        .Replace("set reminder for", "", System.StringComparison.OrdinalIgnoreCase)
+                        .Replace("to", "", System.StringComparison.OrdinalIgnoreCase)
+                        .Trim();
+
+                    DateTime reminderDate = DateTime.Parse(parts[1].Trim());
+
+                    CyberTask task = new CyberTask
+                    {
+                        Title = taskPart,
+                        Description = $"Reminder task: {taskPart}",
+                        ReminderDate = reminderDate,
+                        IsCompleted = false
+                    };
+
+                    _taskManager.AddTask(task);
+                    _activityLog.AddAction($"Reminder created: {taskPart}");
+
+                    return $"Reminder created for '{taskPart}' on {reminderDate:d}.";
+                }
+                catch
+                {
+                    return "I couldn't understand the reminder date. Please use YYYY-MM-DD format.";
+                }
+            }
+
             if (intent == "add_task")
             {
                 string taskTitle = input

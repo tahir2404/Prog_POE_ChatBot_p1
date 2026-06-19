@@ -16,6 +16,13 @@
         {
             string lowerInput = input.ToLower();
 
+
+            if (lowerInput.Contains("remind me on") ||
+            lowerInput.Contains("set reminder"))
+            {
+                return "set_reminder";
+            }
+
             // Task intents
             if (lowerInput.Contains("add task") ||
                 lowerInput.Contains("remind me") ||
