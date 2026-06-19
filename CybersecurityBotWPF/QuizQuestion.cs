@@ -3,9 +3,7 @@
 namespace CybersecurityBotWPF.Quiz
 {
     /// <summary>
-    /// Represents one cybersecurity quiz question.
-    /// Stores the question text, answer options,
-    /// correct answer, and explanation.
+    /// Represents one cybersecurity quiz question. Stores the question text, answer options, correct answer and explanation.
     /// </summary>
     public class QuizQuestion
     {

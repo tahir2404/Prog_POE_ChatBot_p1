@@ -3,9 +3,7 @@
 namespace CybersecurityBotWPF.Tasks
 {
     /// <summary>
-    /// Represents a cybersecurity-related task created by the user.
-    /// Stores task information such as title, description,
-    /// reminder date, and completion status.
+    /// Represents a cybersecurity-related task created by the user. Stores task information such as title, description, reminder date and completion status.
     /// </summary>
     public class CyberTask
     {

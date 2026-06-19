@@ -1,16 +1,13 @@
 ﻿namespace CybersecurityBotWPF
 {
     /// <summary>
-    /// Simulates basic Natural Language Processing (NLP)
-    /// by identifying the user's intended action
-    /// from different sentence patterns.
+    /// Simulates basic Natural Language Processing (NLP) by identifying the user's intended action from different sentence patterns.
     /// </summary>
     public class NlpProcessor
     {
         /// <summary>
         /// Determines the user's intended command.
         /// </summary>
-        /// <param name="input">The user's message.</param>
         /// <returns>The detected intent.</returns>
         public string DetectIntent(string input)
         {

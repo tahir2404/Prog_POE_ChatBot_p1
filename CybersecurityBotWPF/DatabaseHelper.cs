@@ -7,7 +7,6 @@ namespace CybersecurityBotWPF
     /// </summary>
     public static class DatabaseHelper
     {
-        // Update this password to match the one you created during MySQL setup
         private const string ConnectionString =
             "server=localhost;" +
             "database=CybersecurityBotDB;" +

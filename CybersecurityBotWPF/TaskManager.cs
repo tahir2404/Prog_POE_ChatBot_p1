@@ -5,9 +5,7 @@ using System.Collections.Generic;
 namespace CybersecurityBotWPF.Tasks
 {
     /// <summary>
-    /// Manages the user's cybersecurity tasks.
-    /// Handles adding, retrieving, completing,
-    /// and deleting tasks using the MySQL database.
+    /// Manages the user's cybersecurity tasks. Handles adding, retrieving, completing and deleting tasks using the MySQL database.
     /// </summary>
     public class TaskManager
     {

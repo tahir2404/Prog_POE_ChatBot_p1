@@ -3,9 +3,7 @@
 namespace CybersecurityBotWPF.Quiz
 {
     /// <summary>
-    /// Manages the cybersecurity quiz game.
-    /// Handles question loading, answer checking,
-    /// score tracking, and quiz progress.
+    /// Manages the cybersecurity quiz game. Handles question loading, answer checking, score tracking and quiz progress.
     /// </summary>
     public class QuizManager
     {
@@ -124,8 +122,7 @@ namespace CybersecurityBotWPF.Quiz
         }
 
         /// <summary>
-        /// Loads the cybersecurity quiz questions.
-        /// Includes multiple-choice and true/false questions.
+        /// Loads the cybersecurity quiz questions. Includes multiple-choice and true/false questions.
         /// </summary>
         private List<QuizQuestion> LoadQuestions()
         {

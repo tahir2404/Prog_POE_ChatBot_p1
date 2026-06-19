@@ -50,17 +50,6 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Allows the Enter key to submit messages instead of only using the Send button.
-        /// </summary>
-        private void UserInputBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                HandleUserInput();
-            }
-        }
-
-        /// <summary>
         /// Processes the user's input from the textbox. If it is the first message it stores the user's name. After that it sends normal questions to the chatbot.
         /// </summary>
         private void HandleUserInput()
@@ -100,7 +89,6 @@ namespace CybersecurityBotWPF
 
         /// <summary>
         /// Displays a formatted user message in the chat display area.
-        /// </summary>
         /// <summary>
         /// Displays the user's message on the right side of the chat area using a styled message bubble.
         /// </summary>
@@ -158,8 +146,7 @@ namespace CybersecurityBotWPF
         }
 
         /// <summary>
-        /// Checks the database for due or overdue reminders
-        /// and displays them when the application starts.
+        /// Checks the database for due or overdue reminders and displays them when the application starts.
         /// </summary>
         private void ShowDueReminders()
         {
