@@ -10,6 +10,11 @@ namespace CybersecurityBotWPF.Tasks
     public class CyberTask
     {
         /// <summary>
+        /// The unique task ID from the database.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// The task title.
         /// </summary>
         public string Title { get; set; } = "";
@@ -35,10 +40,14 @@ namespace CybersecurityBotWPF.Tasks
         public override string ToString()
         {
             string status = IsCompleted ? "Completed" : "Pending";
+            string reminder = ReminderDate.HasValue
+                ? ReminderDate.Value.ToString("yyyy-MM-dd HH:mm")
+                : "No reminder set";
 
-            return $"Task: {Title}\n" +
+            return $"Task ID: {Id}\n" +
+                   $"Task: {Title}\n" +
                    $"Description: {Description}\n" +
-                   $"Reminder: {ReminderDate}\n" +
+                   $"Reminder: {reminder}\n" +
                    $"Status: {status}";
         }
     }

@@ -22,4 +22,8 @@
     <Folder Include="Screenshots\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.7.0" />
+  </ItemGroup>
+
 </Project>
