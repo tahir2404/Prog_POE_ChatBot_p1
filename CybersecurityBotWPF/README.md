@@ -271,23 +271,6 @@ CREATE TABLE Tasks (
 
 ---
 
-## Screenshots
-
-Include screenshots of:
-
-* Welcome screen
-* Main chatbot interface
-* Voice greeting
-* Cybersecurity conversation
-* Sentiment detection
-* Memory and recall
-* Task management
-* Reminder creation
-* Quiz interface
-* Activity log
-* Database table in MySQL Workbench
-
----
 
 ## GitHub Releases
 
@@ -311,4 +294,4 @@ The project uses semantic versioning:
 
 YouTube Video Link:
 
-[Insert unlisted YouTube video link here]
+[]
